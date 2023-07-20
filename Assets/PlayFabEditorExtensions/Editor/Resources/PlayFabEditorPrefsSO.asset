@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: meateater.regs@gmail.com
-  DevAccountToken: kyi5gk8bxdajycof96561c95bw38nz4zpykysrb9aceu9yuw4za7qd85qf34cjczdrdfocdyhnhu45knoz6iuru1h3yuojcd9hpjhdnqq4p16stt1snu8ctaconua6jxd333die4hsfckjz9uhfgfxdwgcdd4ysxbqwc8nhweja8hbhi9s4et8pjhzyrpsdaqnhus55d
-  AadAuthorization: 
-  SelectedStudio: MG Studio
+  DevAccountToken: g47nydmicrnb1gezjahj5rrne73i1yezhxwc7a9x76z1sccw8t9gam61joz7neoqp1euri3hi3y9tkpkzkkbj8wfmg8e3dqt63srpanpome49gmitm6rbxjzzbaycgutfqn9ptnnxoaw4ff1b8rj5t8hysbufcxbrfaxkz6ygmhrwszdgjbm78ejdcz5jqwarm1kjrm7
+  SelectedStudio: 
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
-  LocalCloudScriptPath: H:/!Repo/PlayfabFusion/Assets/PlayFabEditorExtensions/Editor/Resources/.CloudScript.js
+  LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 1
+  curMainMenuIdx: 0
   curSubMenuIdx: 0
