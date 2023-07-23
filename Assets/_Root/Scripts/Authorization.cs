@@ -4,14 +4,13 @@ using Fusion.Photon.Realtime;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-    
-
 
 public class Authorization : MonoBehaviour
 {
     private const string AUTH_KEY = "player-unique-id";
+    private const string LAST_LOGIN = "player-last-login";
     
     //[SerializeField] private string _playFabTitle;
     [SerializeField] private InputField _username;
@@ -37,8 +36,10 @@ public class Authorization : MonoBehaviour
                 CustomId = customId,
                 CreateAccount = false
             };
-            PlayFabClientAPI.LoginWithCustomID(request,ResultCallback,
-            error => Debug.Log(error));
+            PlayFabClientAPI.LoginWithCustomID(request,ResultCallback, 
+                error => Debug.Log(error));
+            PlayerPrefs.SetString(request.CustomId, DateTime.Now.ToString());
+            SceneManager.LoadScene("Lobby");
         }
         else
         {
@@ -57,6 +58,7 @@ public class Authorization : MonoBehaviour
         Debug.Log(result.SessionTicket);
         var token = result.EntityToken;
         var ticket = result.SessionTicket;
+        
         
         //_runner.StartGame(new StartGameArgs() { });
         // Runner.Run(result);
@@ -86,9 +88,6 @@ public class Authorization : MonoBehaviour
         {
             Debug.Log(error.ErrorMessage);
         });
-
-        
-
     }
 
     private LinkCustomIDRequest LinkCustomIDRequest()
